@@ -2,13 +2,12 @@ import express from 'express';
 import 'express-async-errors';
 import { json } from 'body-parser';
 import cookieSession from 'cookie-session';
+import { errorHanlder, NotFoundError } from '@tickitcore/common';
 
 import { currentUserRouter } from './routes/current-user';
 import { signInRouter } from './routes/sign-in';
 import { signOutRouter } from './routes/sign-out';
 import { signUpRouter } from './routes/sign-up';
-import { errorHanlder } from './middlewares/error-handler';
-import { NotFoundError } from './errors/not-found-error';
 
 const app = express();
 app.set('trust proxy', true);
