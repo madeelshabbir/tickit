@@ -7,7 +7,6 @@ import { OrderCreatedListener } from './events/listeners/order-created-listener'
 import { OrderCancelledListener } from './events/listeners/order-cancelled-listener';
 
 const start = async () => {
-  console.log('Temporary Changes');
   if (!process.env.JWT_KEY) {
     return new Error('JWT_KEY must be defined');
   }
